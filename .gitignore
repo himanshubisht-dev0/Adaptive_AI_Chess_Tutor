@@ -1,0 +1,75 @@
+# Python virtual environments
+venv/
+env/
+*.venv
+
+# Node modules and build files
+node_modules/
+dist/
+build/
+
+# Python package files
+.Python
+pip-self-contained/
+*.egg-info/
+
+# Docker files
+Dockerfile.development
+Dockerfile.dev
+
+# Environment files
+.env
+.env.local
+.env.dev
+.env.production
+.env.bak
+
+# Database files
+# MongoDB
+./data/db/
+./data/mongodb/
+./data/mongo/
+./db/*.log
+
+# SQLite
+*.db
+*.sqlite3
+*.db.sqlite3
+
+# Redis
+./data/redis/.*
+
+# User-specific files
+.DS_Store
+Thumbs.db
+config.json
+
+# IDE/Editor Files
+.idea/
+.vs/
+*.swp
+*.swo
+*.bak
+*.pyc
+*.pyo
+*.tmp
+
+# Build output
+docs/
+output/
+temp/
+
+# Operating system files
+/proc/*
+.DS_Store
+
+# Any other custom directories/files
+static/
+media/
+logs/
+/backups
+
+# Ignore specific environment variables (conceptually, use actual files for secrets)
+# ! This is a conceptual representation
+DATABASE_URL
+API_KEY
