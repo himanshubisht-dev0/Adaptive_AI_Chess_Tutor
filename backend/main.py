@@ -1,3 +1,6 @@
+from routes.auth import router as auth_router
+from routes.game import router as game_router
+from routes.analysis import router as analysis_router
 import sys
 import asyncio
 if sys.platform.startswith("win"):
@@ -49,6 +52,9 @@ app.add_middleware(
 app.include_router(move.router, prefix="/api/move", tags=["Move Analysis"])
 app.include_router(puzzle.router, prefix="/api/puzzle", tags=["Puzzles"])
 app.include_router(feedback.router, prefix="/api/feedback", tags=["Feedback"])
+app.include_router(auth_router, prefix="/api/auth", tags=["Authentication"])
+app.include_router(game_router, prefix="/api/game", tags=["Game Management"])
+app.include_router(analysis_router, prefix="/api/analysis", tags=["Move Analysis"])
 
 @app.get("/")
 async def root():
